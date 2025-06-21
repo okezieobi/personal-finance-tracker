@@ -1,41 +1,33 @@
 # Personal Finance Tracker
 
-A Spring Boot application for tracking personal finances.
+Personal Finance Tracker is a Java Spring Boot application designed to help users manage and track their personal finances efficiently. The project leverages modern Java frameworks and tools to provide a robust backend for user management and financial data storage.
 
 ## Features
 
-- User management with roles
-- In-memory H2 database for development and testing
-- JPA/Hibernate for ORM and schema management
-- H2 console for database inspection
+- User management with roles (username, password, email, role)
+- Secure authentication and authorization
+- In-memory H2 database for easy development and testing
+- JPA/Hibernate for object-relational mapping and automatic schema updates
+- H2 web console for inspecting and managing the database
 
-## Application Properties
+## Technologies Used
 
-```properties
-spring.application.name=personal-finance-tracker
-
-# H2 Database Configuration
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
-spring.datasource.url=jdbc:h2:mem:financetrackerdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
-# JPA/Hibernate Configuration
-spring.jpa.hibernate.ddl-auto=update # Automatically create/update schema based on entities
-spring.jpa.show-sql=true 
-spring.jpa.properties.hibernate.format_sql=true # Format logged SQL for readability
-```
+- Java 17+
+- Spring Boot
+- Spring Data JPA (Hibernate)
+- H2 Database
+- Lombok
 
 ## Getting Started
 
 ### Prerequisites
 
-- Java 17+
+- Java 17 or higher
 - Maven
 
 ### Running the Application
+
+Clone the repository and run:
 
 ```sh
 ./mvnw spring-boot:run
